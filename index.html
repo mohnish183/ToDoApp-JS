@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/87ebf30ca2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>TODO App JS</title>
+  </head>
+  <div class="main-container" id="background-blur">
+    <div class="head">
+      <h1>TASK <span>List</span></h1>
+      <div class="link">
+        <button onclick="additem()" class="additem" id="addItemBtn">
+          <i class="fa-solid fa-circle-plus"></i>Add Item
+        </button>
+      </div>
+    </div>
+    <div class="flex_container" id="flex_box"></div>
+  </div>
+  <!-- pop up section -->
+  <div class="add_new_list hide" id="pop-up">
+    <div class="newlist-content">
+      <h2>Add New Item</h2>
+      <input type="text" id="input-field" class="inputfield" />
+      <br />
+      <button onclick="addflexbox()">ADD</button
+      ><button onclick="closebtn()">CLose</button>
+    </div>
+  </div>
+  <!-- middle section -->
+  <div class="add_new_item hide" id="pop-up-1">
+    <div class="newlist-content">
+      <h2>Add New List</h2>
+      <input type="text" id="input-field-item" class="inputfield-item" />
+      <br />
+      <button class="listItem" onclick="listappend()">ADD</button
+      ><button onclick="closebtn()" id="listclosebtn">CLose</button>
+    </div>
+  </div>
+  <body>
+    <script src="script.js"></script>
+  </body>
+</html>
