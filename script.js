@@ -5,6 +5,7 @@ let inputData = document.getElementById("input-field");
 let inputDataList = document.getElementById("input-field-item");
 let navBar = document.getElementById("navbar");
 let navbarHead = document.getElementById("navbarhead");
+let navbarAddBtn = document.getElementById("nav-additembtn");
 let addListItem, deleteBtn, listItem;
 let listContainer;
 let selectedListItem;
@@ -80,7 +81,7 @@ function addflexbox() {
       container.addEventListener("click", function (listClick) {
         if (listClick.target.tagName === "LI") {
           //get the parent container element
-          let parentContainer = listClick.target.closest(".card");
+          let parentContainer = listClick.target.parentElement;
           //Mark selected list
           selectedListItem = parentContainer.querySelector(".checked");
           if (selectedListItem) {
@@ -91,7 +92,7 @@ function addflexbox() {
         // check if the clicked element is the deleted button
         if (listClick.target.classList.contains("deleteBtn")) {
           // get the parent  container element
-          const parentContainer = listClick.target.closest(".card");
+          const parentContainer = listClick.target.parentElement;
           //get the selected list item within the container
           console.log(parentContainer);
           const selectedListItem = parentContainer.querySelector(".checked");
@@ -110,9 +111,9 @@ function addflexbox() {
         if (shift.target.tagName === "H1") {
           let cardVar = shift.currentTarget.getAttribute("id");
           let cardName = document.getElementById(`${cardVar}`);
-          blur.setAttribute("class", "visible");
+          blur.classList.add("visible");
           cardName.style.visibility = "visible";
-          cardName.setAttribute("class", "position");
+          cardName.classList.add("position");
           navBar.classList.remove("navbarhide");
           navBar.classList.add("navbarvisible");
           navbarHead.innerHTML = shift.currentTarget.children[0].textContent;
@@ -127,7 +128,9 @@ function addflexbox() {
       addList.classList.add("hide");
     });
   }
-
+  blur.classList.remove("visible");
+  navBar.classList.add("navbarhide");
+  navBar.classList.remove("navbarvisible");
   // add list
 }
 this.listItem.addEventListener("click", (e) => {
@@ -138,4 +141,7 @@ this.listItem.addEventListener("click", (e) => {
   li.innerHTML = inputDataList.value;
   addList.classList.add("hide");
   inputDataList.value = "";
+});
+navbarAddBtn.addEventListener("click", () => {
+  addItem.classList.toggle("hide");
 });
