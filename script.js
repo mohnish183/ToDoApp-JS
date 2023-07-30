@@ -6,9 +6,11 @@ let inputDataList = document.getElementById("input-field-item");
 let navBar = document.getElementById("navbar");
 let navbarHead = document.getElementById("navbarhead");
 let navbarAddBtn = document.getElementById("nav-additembtn");
+let backBtn = document.getElementById("backbtn");
 let addListItem, deleteBtn, listItem;
 let listContainer;
 let selectedListItem;
+let cardName;
 let i,
   temp = 0,
   loop = 0;
@@ -110,9 +112,9 @@ function addflexbox() {
       containershift.addEventListener("click", function (shift) {
         if (shift.target.tagName === "H1") {
           let cardVar = shift.currentTarget.getAttribute("id");
-          let cardName = document.getElementById(`${cardVar}`);
+          cardName = document.getElementById(`${cardVar}`);
           blur.classList.add("visible");
-          cardName.style.visibility = "visible";
+          cardName.classList.add("visiblecard");
           cardName.classList.add("position");
           navBar.classList.remove("navbarhide");
           navBar.classList.add("navbarvisible");
@@ -131,6 +133,8 @@ function addflexbox() {
   blur.classList.remove("visible");
   navBar.classList.add("navbarhide");
   navBar.classList.remove("navbarvisible");
+  cardName.classList.remove("position");
+  cardName.classList.remove("visiblecard");
   // add list
 }
 this.listItem.addEventListener("click", (e) => {
@@ -144,4 +148,11 @@ this.listItem.addEventListener("click", (e) => {
 });
 navbarAddBtn.addEventListener("click", () => {
   addItem.classList.toggle("hide");
+});
+backBtn.addEventListener("click", () => {
+  blur.classList.remove("visible");
+  navBar.classList.add("navbarhide");
+  navBar.classList.remove("navbarvisible");
+  cardName.classList.remove("position");
+  cardName.classList.remove("visiblecard");
 });

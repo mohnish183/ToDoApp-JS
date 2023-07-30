@@ -115,7 +115,9 @@ ul li.checked {
   color: #555;
   text-decoration: line-through;
 }
-
+.visiblecard {
+  visibility: visible;
+}
 /* ADD ITEM PAGE */
 
 .main-container_itempage {
