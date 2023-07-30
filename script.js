@@ -120,9 +120,6 @@ function addflexbox() {
           navBar.classList.add("navbarvisible");
           navbarHead.innerHTML = shift.currentTarget.children[0].textContent;
         }
-        if (shift.target.tagName === "LI") {
-          console.log("heelo");
-        }
       });
     });
 
@@ -130,6 +127,7 @@ function addflexbox() {
       addList.classList.add("hide");
     });
   }
+
   blur.classList.remove("visible");
   navBar.classList.add("navbarhide");
   navBar.classList.remove("navbarvisible");
@@ -149,6 +147,7 @@ this.listItem.addEventListener("click", (e) => {
 navbarAddBtn.addEventListener("click", () => {
   addItem.classList.toggle("hide");
 });
+// when click back button
 backBtn.addEventListener("click", () => {
   blur.classList.remove("visible");
   navBar.classList.add("navbarhide");
