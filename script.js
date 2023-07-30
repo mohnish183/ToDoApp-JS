@@ -3,11 +3,16 @@ let addList = document.getElementById("pop-up-1");
 let blur = document.getElementById("background-blur");
 let inputData = document.getElementById("input-field");
 let inputDataList = document.getElementById("input-field-item");
+let navBar = document.getElementById("navbar");
+let navbarHead = document.getElementById("navbarhead");
 let addListItem, deleteBtn, listItem;
 let listContainer;
-
+let selectedListItem;
+let i,
+  temp = 0,
+  loop = 0;
 let listCloseBtn = document.getElementById("listclosebtn");
-
+let bodyContainer = document.getElementsByClassName("main-container");
 let check = true;
 function additem() {
   addItem.classList.toggle("hide");
@@ -26,7 +31,7 @@ function addflexbox() {
   flexBox.classList.add("box");
   addItem.classList.add("hide");
   blur.classList.remove("blur");
-  div.setAttribute("class", `card${cardId}`);
+  div.setAttribute("class", `card`);
   div.setAttribute("id", `card${cardId}`);
   let x = document.getElementById(`card${cardId}`);
   let title = document.createElement("h1");
@@ -35,7 +40,7 @@ function addflexbox() {
   // add un-order-list
   let cardList = document.createElement("ul");
   cardList.setAttribute("class", `ul`);
-  cardList.setAttribute("value", `ul${cardId}`);
+  cardList.setAttribute("id", `ul${cardId}`);
   listContainer = document.querySelectorAll(`.ul`);
   x.appendChild(cardList);
   // add button
@@ -50,47 +55,87 @@ function addflexbox() {
   inputData.value = "";
   addListItem = document.querySelectorAll(".add-list");
   deleteBtn = document.querySelectorAll(".deleteBtn");
-  listItem = document.querySelectorAll(".listItem");
-
+  this.listItem = document.getElementById("listItem");
+  let ul = document.getElementsByTagName("ul");
+  console.log(ul);
   // listContainer.setAttribute("class", `ul${cardId}`);
-  console.log(addListItem);
 
-  for (let i = 0; i < addListItem.length; i++) {
-    let loop = 0;
-
-    console.log(`value of i = ${i}`);
-    console.log(addListItem[i]);
-
-    addListItem[i].addEventListener("click", () => {
+  for (i = 0; i < addListItem.length; i++) {
+    addListItem[i].addEventListener("click", (event) => {
+      let loop = 0;
       do {
-        console.log(`hello ${i}`);
-        console.log(addListItem[i]);
-
         if (loop % 2 == 0) addList.classList.remove("hide");
         if (loop % 2 != 0) addList.classList.add("hide");
         loop++;
       } while (false);
+
+      this.listValue =
+        event.currentTarget.parentElement.children[1].getAttribute("id");
+    });
+    // get all the container card element
+    let containers = document.querySelectorAll(".card");
+    //Add event listner to each container to handle click event
+    console.log(containers);
+    containers.forEach((container) => {
+      container.addEventListener("click", function (listClick) {
+        if (listClick.target.tagName === "LI") {
+          //get the parent container element
+          let parentContainer = listClick.target.closest(".card");
+          //Mark selected list
+          selectedListItem = parentContainer.querySelector(".checked");
+          if (selectedListItem) {
+            selectedListItem.classList.remove("checked");
+          }
+          listClick.target.classList.toggle("checked");
+        }
+        // check if the clicked element is the deleted button
+        if (listClick.target.classList.contains("deleteBtn")) {
+          // get the parent  container element
+          const parentContainer = listClick.target.closest(".card");
+          //get the selected list item within the container
+          console.log(parentContainer);
+          const selectedListItem = parentContainer.querySelector(".checked");
+          if (!parentContainer.children[1].hasChildNodes()) {
+            parentContainer.remove();
+          }
+          //remove the selected list item from the list
+          if (selectedListItem) {
+            selectedListItem.remove();
+          }
+        }
+      });
+    });
+    containers.forEach((containershift) => {
+      containershift.addEventListener("click", function (shift) {
+        if (shift.target.tagName === "H1") {
+          let cardVar = shift.currentTarget.getAttribute("id");
+          let cardName = document.getElementById(`${cardVar}`);
+          blur.setAttribute("class", "visible");
+          cardName.style.visibility = "visible";
+          cardName.setAttribute("class", "position");
+          navBar.classList.remove("navbarhide");
+          navBar.classList.add("navbarvisible");
+          navbarHead.innerHTML = shift.currentTarget.children[0].textContent;
+        }
+        if (shift.target.tagName === "LI") {
+          console.log("heelo");
+        }
+      });
+    });
+
+    listCloseBtn.addEventListener("click", () => {
+      addList.classList.add("hide");
     });
   }
-  console.log(`ul ${listContainer.li} ${listContainer.length}`);
-  listItem[0].addEventListener("click", () => {
-    for (let j = 0; j < 10; j++) {
-      console.log(`value of j ${j}`);
-      do {
-        console.log(`value of j after click ${j}`);
-        let li = document.createElement("li");
 
-        listContainer.appendChild(li);
-        title.style.color = "red";
-        li.innerHTML = inputDataList.value;
-      } while (false);
-    }
-  });
-  listCloseBtn.addEventListener("click", () => {
-    addList.classList.add("hide");
-  });
+  // add list
 }
-// add list
-function listappend() {}
-//
-// delete item and card
+this.listItem.addEventListener("click", (e) => {
+  let addUlData = document.getElementById(`${this.listValue}`);
+  let li = document.createElement("li");
+
+  addUlData.appendChild(li);
+  li.innerHTML = inputDataList.value;
+  addList.classList.add("hide");
+  inputDataList.value = "";
+});

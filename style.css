@@ -43,6 +43,44 @@ body {
   /* background-color:rgba(49, 133, 222, 0.842); */
   color: rgb(52, 78, 105);
 }
+.navbarhide {
+  visibility: hidden;
+}
+.navbarvisible {
+  visibility: visible;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  bottom: 15vh;
+}
+.navbar .back {
+  position: relative;
+  left: 25%;
+}
+.navbar .plusbtn {
+  position: relative;
+  right: 20%;
+}
+#navbarhead {
+  color: white;
+  font-size: 32px;
+}
+.navbar .back a {
+  color: white;
+  font-size: 24px;
+}
+.navbar .plusbtn {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: aqua;
+  width: 18px;
+  padding: 12px;
+  border-radius: 50%;
+}
 
 /* middle section (add card)*/
 .flex_container {
@@ -53,6 +91,7 @@ body {
   height: 100%;
   width: 90vw;
   margin: 0 8vh 2vh 18vh;
+  position: relative;
 }
 .box div {
   width: 320px;
@@ -61,6 +100,20 @@ body {
   border: 8px solid red;
   margin-bottom: 5vh;
   position: relative;
+}
+
+ul {
+  position: relative;
+  top: 6vh;
+  left: 6vw;
+  font-size: 20px;
+}
+li {
+  margin-bottom: 2vh;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
 }
 
 /* ADD ITEM PAGE */
@@ -106,6 +159,16 @@ body {
 }
 .hide {
   display: none;
+}
+.visible {
+  visibility: hidden;
+}
+.position {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  margin: 0 auto;
 }
 
 /* card button */
