@@ -7,6 +7,7 @@ let navBar = document.getElementById("navbar");
 let navbarHead = document.getElementById("navbarhead");
 let navbarAddBtn = document.getElementById("nav-additembtn");
 let backBtn = document.getElementById("backbtn");
+const center = document.getElementById("center");
 let addListItem, deleteBtn, listItem;
 let listContainer;
 let selectedListItem;
@@ -113,12 +114,23 @@ function addflexbox() {
         if (shift.target.tagName === "H1") {
           let cardVar = shift.currentTarget.getAttribute("id");
           cardName = document.getElementById(`${cardVar}`);
+          cardName.style.position = "absolute";
+          // center.appendChild(cardName);
+          // center.style.display = "block";
+          // center.style.display = "flex";
+          // cardName.classList.add("center_box");
+          // cardName.classList.add("center_boxH1");
+          // deleteButton.classList.add("center_boxDelete");
+          // itemAdd.classList.add("center_boxAddlist");
+
+          //
           blur.classList.add("visible");
           cardName.classList.add("visiblecard");
-          cardName.classList.add("position");
+
           navBar.classList.remove("navbarhide");
           navBar.classList.add("navbarvisible");
           navbarHead.innerHTML = shift.currentTarget.children[0].textContent;
+          cardName.classList.add("position");
         }
       });
     });
@@ -127,7 +139,7 @@ function addflexbox() {
       addList.classList.add("hide");
     });
   }
-
+  cardName.style.position = "relative";
   blur.classList.remove("visible");
   navBar.classList.add("navbarhide");
   navBar.classList.remove("navbarvisible");
@@ -149,6 +161,7 @@ navbarAddBtn.addEventListener("click", () => {
 });
 // when click back button
 backBtn.addEventListener("click", () => {
+  cardName.style.position = "relative";
   blur.classList.remove("visible");
   navBar.classList.add("navbarhide");
   navBar.classList.remove("navbarvisible");
