@@ -20,9 +20,14 @@
     left: 12vw;
     width: 50vw;
   }
+  .additem {
+    top: 5vh;
+    width: 50vw;
+  }
   .add_new_list {
     width: 80vw;
     left: 10%;
+    background-color: #c8e4b2;
   }
   .newlist-content input {
     width: 50vw;
@@ -35,4 +40,275 @@
     right: 8%;
   }
   /* card */
+
+  .flex_container {
+    flex-direction: column;
+  }
+  .box div {
+    right: 16vw;
+    width: 70vw;
+  }
+  ul {
+    left: 25vw;
+    font-size: 32px;
+  }
+  .flex_container div .add-list {
+    width: 20vw;
+  }
+  .flex_container div .deleteBtn {
+    width: 20vw;
+  }
+  /* append-list popup */
+  .add_new_item {
+    background-color: pink;
+    width: 86vw;
+    left: 6%;
+  }
+  /* navbar section */
+  .navbar .back h2 {
+    position: relative;
+    right: 10vw;
+  }
+  #navbarhead {
+    position: relative;
+    top: 10vh;
+  }
+  .navbar .plusbtn {
+    display: inline-block;
+    position: relative;
+    right: 16vw;
+    bottom: 1vh;
+    padding: 1vh;
+  }
+  .position {
+    left: -20%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .head {
+    position: relative;
+  }
+  .head h1 {
+    position: absolute;
+    left: 0.5vh;
+    font-size: 32px;
+  }
+  .head span {
+    position: absolute;
+    bottom: 0.2vh;
+    left: 18vw;
+    font-size: 32px;
+  }
+  .link {
+    position: absolute;
+    top: 12vh;
+    left: 12vw;
+    width: 50vw;
+  }
+  .additem {
+    left: 30vw;
+    top: -3vh;
+    width: 35vw;
+  }
+  .add_new_list {
+    width: 80vw;
+    left: 10%;
+    background-color: #c8e4b2;
+  }
+  .newlist-content input {
+    width: 50vw;
+    position: relative;
+    right: 8%;
+  }
+  .newlist-content button {
+    width: 15vw;
+    position: relative;
+    right: 8%;
+  }
+  /* card */
+
+  .flex_container {
+    flex-direction: column;
+  }
+  .box div {
+    right: 10vw;
+    width: 60vw;
+  }
+  ul {
+    left: 25vw;
+    font-size: 32px;
+  }
+  .flex_container div .add-list {
+    width: 20vw;
+  }
+  .flex_container div .deleteBtn {
+    width: 20vw;
+  }
+  /* append-list popup */
+  .add_new_item {
+    background-color: pink;
+    width: 86vw;
+    left: 6%;
+  }
+  /* navbar section */
+  .navbar .back h2 {
+    position: relative;
+    right: 10vw;
+  }
+  #navbarhead {
+    position: relative;
+  }
+  .navbar .plusbtn {
+    display: inline-block;
+    position: relative;
+    right: 16vw;
+    bottom: 1vh;
+    padding: 1vh;
+  }
+  .position {
+    left: -5%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .head {
+    position: relative;
+  }
+  .head h1 {
+    position: absolute;
+
+    left: 0.5vh;
+    font-size: 32px;
+  }
+  .head span {
+    position: absolute;
+    bottom: 0.1vh;
+    left: 14vw;
+    font-size: 38px;
+  }
+  .additem {
+    left: 50vw;
+
+    width: 35vw;
+  }
+  .flex_container {
+    flex-direction: row;
+  }
+  .box div {
+    right: 20vw;
+  }
+  ul {
+    left: 16vw;
+    font-size: 32px;
+  }
+  .flex_container div .add-list {
+    width: 12vw;
+    font-size: 18px;
+  }
+  .flex_container div .deleteBtn {
+    width: 10vw;
+    font-size: 20px;
+  }
+  .add_new_list {
+    width: 80vw;
+    left: 10%;
+    background-color: #c8e4b2;
+  }
+  /* append-list popup */
+  .add_new_item {
+    background-color: pink;
+    width: 86vw;
+    left: 6%;
+  }
+  .newlist-content input {
+    width: 50vw;
+    position: relative;
+    right: 8%;
+  }
+  .newlist-content button {
+    width: 15vw;
+    position: relative;
+    right: 8%;
+    font-size: 20px;
+  }
+  /* back page */
+  .position {
+    left: 10%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .head {
+    position: relative;
+  }
+  .head h1 {
+    position: absolute;
+    right: 50vw;
+  }
+  .additem {
+    position: absolute;
+    right: 1vw;
+  }
+  .box div {
+    right: 20vw;
+  }
+  ul {
+    left: 12vw;
+    font-size: 32px;
+  }
+  .flex_container div .add-list {
+    width: 10vw;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .flex_container div .deleteBtn {
+    width: 10vw;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  /* list popup */
+  .add_new_item {
+    background-color: pink;
+    width: 70vw;
+    left: 16%;
+  }
+  .newlist-content h2 {
+    position: relative;
+    right: 8vw;
+  }
+  .newlist-content input {
+    width: 50vw;
+    position: relative;
+    right: 8%;
+    font-size: 24px;
+  }
+  .newlist-content button {
+    width: 18vw;
+    position: relative;
+    right: 8%;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  /* add new card */
+  .add_new_list {
+    width: 80vw;
+    left: 10%;
+    background-color: #c8e4b2;
+  }
+  /* back page */
+  #navbarhead {
+    position: relative;
+    bottom: 1vh;
+    left: 1vw;
+  }
+  .navbar .plusbtn {
+    display: inline-block;
+    position: relative;
+    right: 16vw;
+    bottom: 1vh;
+    padding: 1vh;
+  }
+  .position {
+    left: 8%;
+  }
 }

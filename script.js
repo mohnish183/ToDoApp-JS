@@ -145,8 +145,8 @@ function addflexbox() {
   navBar.classList.remove("navbarvisible");
   cardName.classList.remove("position");
   cardName.classList.remove("visiblecard");
-  // add list
 }
+// add list
 this.listItem.addEventListener("click", (e) => {
   let addUlData = document.getElementById(`${this.listValue}`);
   let li = document.createElement("li");
