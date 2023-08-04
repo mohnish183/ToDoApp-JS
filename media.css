@@ -1,0 +1,38 @@
+@media screen and (min-width: 360px) and (max-width: 500px) {
+  /* phone */
+  .head {
+    position: relative;
+  }
+  .head h1 {
+    position: absolute;
+    left: 0.5vh;
+    font-size: 32px;
+  }
+  .head span {
+    position: absolute;
+    bottom: 0.2vh;
+    left: 24vw;
+    font-size: 32px;
+  }
+  .link {
+    position: absolute;
+    top: 12vh;
+    left: 12vw;
+    width: 50vw;
+  }
+  .add_new_list {
+    width: 80vw;
+    left: 10%;
+  }
+  .newlist-content input {
+    width: 50vw;
+    position: relative;
+    right: 8%;
+  }
+  .newlist-content button {
+    width: 15vw;
+    position: relative;
+    right: 8%;
+  }
+  /* card */
+}
