@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background-color: black;
+  background-image: url("background.webp");
 }
 .blur {
   filter: blur(1.5rem);
@@ -62,7 +62,7 @@ body {
   left: 25%;
 }
 .navbar .back h2 {
-  color: white;
+  color: #f31559;
   font-size: 24px;
   cursor: pointer;
 }
@@ -107,6 +107,7 @@ body {
   border: 8px solid red;
   margin-bottom: 5vh;
   position: relative;
+  background-image: url("newpage.jpg");
 }
 
 ul {

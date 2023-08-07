@@ -5,13 +5,13 @@
   }
   .head h1 {
     position: absolute;
-    left: 0.5vh;
+    left: 10vw;
     font-size: 32px;
   }
   .head span {
     position: absolute;
     bottom: 0.2vh;
-    left: 24vw;
+    left: 30vw;
     font-size: 32px;
   }
   .link {
@@ -71,7 +71,8 @@
   }
   #navbarhead {
     position: relative;
-    top: 10vh;
+    bottom: 1vh;
+    font-weight: 400;
   }
   .navbar .plusbtn {
     display: inline-block;
