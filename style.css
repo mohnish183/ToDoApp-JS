@@ -88,6 +88,11 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+#noitem {
+  font-size: 32px;
+  position: relative;
+  left: 5vw;
+}
 
 /* middle section (add card)*/
 .flex_container {

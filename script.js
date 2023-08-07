@@ -8,6 +8,7 @@ let navbarHead = document.getElementById("navbarhead");
 let navbarAddBtn = document.getElementById("nav-additembtn");
 let backBtn = document.getElementById("backbtn");
 const center = document.getElementById("center");
+let noitem = document.getElementById("noitem");
 let addListItem, deleteBtn, listItem;
 let listContainer;
 let selectedListItem;
@@ -27,8 +28,14 @@ function closebtn() {
   blur.classList.remove("blur");
 }
 let cardId = 0;
+
 function addflexbox() {
   cardId++;
+  if (cardId > 0) {
+    noitem.style.display = "none";
+  } else {
+    noitem.style.display = "block";
+  }
   let flexBox = document.getElementById("flex_box");
   let div = document.createElement("div");
   flexBox.appendChild(div);
@@ -99,6 +106,7 @@ function addflexbox() {
           //get the selected list item within the container
           console.log(parentContainer);
           const selectedListItem = parentContainer.querySelector(".checked");
+
           if (!parentContainer.children[1].hasChildNodes()) {
             parentContainer.remove();
           }
