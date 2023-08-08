@@ -1,4 +1,8 @@
 @media screen and (min-width: 360px) and (max-width: 500px) {
+  body {
+  }
+  .main-container {
+  }
   /* phone */
   .head {
     position: relative;
@@ -43,6 +47,7 @@
 
   .flex_container {
     flex-direction: column;
+    width: 60vw;
   }
   .box div {
     right: 16vw;
@@ -130,6 +135,7 @@
 
   .flex_container {
     flex-direction: column;
+    width: 60vw;
   }
   .box div {
     right: 10vw;
@@ -193,9 +199,14 @@
   }
   .flex_container {
     flex-direction: row;
+    width: 100%;
+    margin: 0;
   }
   .box div {
-    right: 20vw;
+    width: 280px;
+    margin: 2vh 0vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
   }
   ul {
     left: 16vw;
@@ -233,7 +244,7 @@
   }
   /* back page */
   .position {
-    left: 10%;
+    left: 30%;
   }
 }
 
@@ -249,12 +260,22 @@
     position: absolute;
     right: 1vw;
   }
-  .box div {
-    right: 20vw;
-  }
+
   ul {
     left: 12vw;
     font-size: 32px;
+  }
+  .flex_container {
+    width: 100%;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+  }
+  .box div {
+    width: 280px;
+    margin: 2vh 0vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
   }
   .flex_container div .add-list {
     width: 10vw;
@@ -310,6 +331,6 @@
     padding: 1vh;
   }
   .position {
-    left: 8%;
+    left: 35%;
   }
 }
